@@ -13,7 +13,7 @@
     <body> 
         <div class="login"> 
             <h1>Login </h1> 
-            <img src="image/avatar.png" class="avatar"> 
+            <img src="avatar.png" class="avatar"> 
             <form method="post" action="cek_login.php"> 
                 <p>Username</p> 
                 <input type="text" name="username" placeholder="Enter Username"> 
