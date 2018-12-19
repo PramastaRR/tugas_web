@@ -7,7 +7,7 @@ $id_poli = $_GET["id_poli"];
 
 // menentukan nama_poli dari id_poli yang didapatkan
 $sql_result = $conn->query(
-    "select * from puskesmas_sawangan.poli where id_poli=".$id_poli
+    "select * from puskesmas.poli where id_poli=".$id_poli
 );
 $array_poli = mysqli_fetch_array($sql_result, MYSQLI_NUM);
 $nama_poli = $array_poli[1];

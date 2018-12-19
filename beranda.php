@@ -2,7 +2,7 @@
 include "connection.php";
 
 $sql_result = $conn->query(
-    "select * from puskesmas_sawangan.poli"
+    "select * from puskesmas.poli"
 );
 
 ?>
