@@ -285,11 +285,12 @@ include "connection.php";
                 </label>                 
                 <div class="nik"> 
                   
-                            <label class="control-label">NIK</label>
+                            <label class="control-label">NIK atau Nomor HP/Telepon</label>
                         </div>
                         <div class="col-md-3">
                             <form>
-                            <input type="text" name="nik" placeholder="Masukan nomor NIK yang ingin dicari..." value="<?= $_GET['nik']?>"> 
+                            <input type="text" name="search" placeholder="Masukan nomor NIK atau Nomor HP/Telepon yang ingin dicari..." 
+                                value="<?= $_GET['search']?>"> 
                             <button type="submit">Cari</button>                             
                             </form>
                         </div>                         
@@ -311,10 +312,15 @@ include "connection.php";
                             
                             </tr>
 <?
-if (!empty($_GET['nik'])){
-    $nik = $_GET['nik'];
+if (!empty($_GET['search'])){
+    $search = $_GET['search'];
     for ($i=1; $i<=5; $i++){
-        $hasil_pencarian = $conn -> query("select * from antrean_poli{$i} A left join poli B on A.id_poli = B.id_poli where nik='{$nik}'");
+        $hasil_pencarian = $conn -> query("
+            select * from antrean_poli{$i} 
+            A left join poli B 
+            on A.id_poli = B.id_poli 
+            where nik='{$search}' or notelp='{$search}'
+        ");
         while ($rows = $hasil_pencarian -> fetch_assoc()){
         
 ?>

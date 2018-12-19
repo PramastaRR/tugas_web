@@ -152,7 +152,7 @@ $conn->query("
             <label>
                 <h1>Pendaftaran berhasil dilakukan.</h1>
             </label>
-            <form action="/tugas_web/lihatantri.php/?nik=<?= $nik?>" method="post">
+            <form action="/tugas_web/lihatantri.php/?search=<?= $nik?>" method="post">
                 <button type="submit">Lihat nomor antrean</button>                             
             </form>
         </div>             
