@@ -6,7 +6,7 @@ session_start();
 
 // cek apakah user telah login, jika belum login maka di alihkan ke halaman login
 if($_SESSION['status'] !="login"){
-	header("location: admin_login.php");
+	header("location: /tugas_web/admin_login.php");
 }
 
 // mencari nama poli
@@ -271,9 +271,9 @@ $sql_result = $conn->query(
                 <div class="toolbar"> 
                     <button class="btn btn--primary">Add New Plumbus</button>  
                     
-                    <a href="logout.php" class="logout"> 
-        Log Out
- </a> 
+                    <a href="../logout.php" class="logout"> 
+                        Log Out
+                    </a> 
                 </div>                 
             </header>             
             <nav class="admin__nav"> 
@@ -321,14 +321,25 @@ $sql_result = $conn->query(
         }
     ?>
   
-</table>                 
+</table>
+<br/>
+<a class="logout" onclick="hapusData()"> Hapus Antrean </a>                  
             </main>             
             <footer class="admin__footer"> 
                 <ul class="ticker"> 
 </ul>                 
                 <span>&nbsp;2018 Dashboard Pasien. </span> 
             </footer>             
-        </div>         
+        </div>
+        <script>
+        function hapusData() {
+            if (confirm("Hapus data antrean? Data yang sudah terhapus tidak bisa dikembalikan lagi.")) {
+                <?php
+                $conn->query("truncate antrean_poli{$id_poli}");    
+                ?>
+            }
+        }
+        </script>         
     </body>     
 </html>
 
