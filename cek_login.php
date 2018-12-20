@@ -18,8 +18,8 @@ $cek = mysqli_num_rows($sql_result);
 if($cek > 0){
     $_SESSION['username'] = $username;
     $_SESSION['status'] = "login";
-    header("location:admin.php");
+    header("location:admin.php/?id_poli=1");
 }else{
-    header("location:cek_login.php?pesan=gagal");
+    header("location:admin_login.php");
 }
 ?>
