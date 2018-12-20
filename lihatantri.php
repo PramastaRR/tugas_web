@@ -290,7 +290,7 @@ include "connection.php";
                         <div class="col-md-3">
                             <form>
                             <input type="text" name="search" placeholder="Masukan nomor NIK atau Nomor HP/Telepon yang ingin dicari..." 
-                                value="<?= $_GET['search']?>"> 
+                                > 
                             <button type="submit">Cari</button>                             
                             </form>
                         </div>                         
