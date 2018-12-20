@@ -6,5 +6,5 @@ session_start();
 session_destroy();
 
 // mengalihkan halaman sambil mengirim pesan logout
-header("location: admin_login.php?pesan=logout");
+header("location: admin_login.php");
 ?>
