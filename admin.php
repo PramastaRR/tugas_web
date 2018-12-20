@@ -263,7 +263,7 @@ tr:nth-child(even) {
     <body> 
         <div class="admin"> 
             <header class="admin__header"> 
-                <a href="#" class="logo"><h1>Daftar Pasien</h1></a> 
+                <a href="admin.php" class="logo"><h1>Daftar Pasien</h1></a> 
                 <div class="toolbar"> 
                     <button class="btn btn--primary">Add New Plumbus</button>  
                     
