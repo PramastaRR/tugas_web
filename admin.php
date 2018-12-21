@@ -302,6 +302,7 @@ $sql_result = $conn->query(
     <th>No Telpon</th>
   </tr>
   <tr>
+    
     <?php
     $daftarpasien = $conn->query("select * from antrean_poli{$id_poli}");
     
@@ -323,23 +324,17 @@ $sql_result = $conn->query(
   
 </table>
 <br/>
-<a class="logout" onclick="hapusData()"> Hapus Antrean </a>                  
+            <form method="post" action="../hapusantrean.php">
+                <input type="hidden" name="id_poli" value="<?= $id_poli ?>">
+                <input type="submit" class="logout" value="Hapus Antrean">                
+            </form>
             </main>             
             <footer class="admin__footer"> 
                 <ul class="ticker"> 
-</ul>                 
+                </ul>                 
                 <span>&nbsp;2018 Dashboard Pasien. </span> 
             </footer>             
-        </div>
-        <script>
-        function hapusData() {
-            if (confirm("Hapus data antrean? Data yang sudah terhapus tidak bisa dikembalikan lagi.")) {
-                <?php
-                $conn->query("truncate antrean_poli{$id_poli}");    
-                ?>
-            }
-        }
-        </script>         
+        </div>     
     </body>     
 </html>
 
