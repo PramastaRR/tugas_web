@@ -2,10 +2,10 @@
 -- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 19, 2018 at 07:47 PM
--- Server version: 10.1.36-MariaDB
--- PHP Version: 7.1.23
+-- Host: localhost
+-- Generation Time: Dec 21, 2018 at 08:21 AM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 7.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -44,16 +44,8 @@ CREATE TABLE `antrean_poli1` (
 --
 
 INSERT INTO `antrean_poli1` (`id_poli`, `no_antrean`, `nik`, `nama_pasien`, `jeniskelamin`, `tgllahir`, `alamat`, `notelp`) VALUES
-(1, 1, '123', 'tri', 'L', '1996-06-07', 'depok', '081384389957'),
-(1, 2, '123', 'tri', 'L', '1996-06-07', 'depok', '081384389957'),
-(1, 3, '123', 'tri', 'L', '1996-06-07', 'depok', '081384389957'),
-(1, 4, '123', 'tri', 'L', '1996-06-07', 'depok', '081384389957'),
-(1, 5, '123', 'tri', 'L', '1996-06-07', 'depok', '081384389957'),
-(1, 6, '123', 'tri', 'L', '1996-06-07', 'depok', '081384389957'),
-(1, 7, '123', 'tri', 'L', '1996-06-07', 'depok', '081384389957'),
-(1, 8, '123', 'tri', 'L', '1996-06-07', 'depok', '081384389957'),
-(1, 9, '123', 'tri', 'L', '1996-06-07', 'depok', '081384389957'),
-(1, 10, '123', 'tri', 'L', '1996-06-07', 'depok', '081384389957');
+(1, 1, '1234567890', 'Pramasta', 'L', '2018-12-21', 'Rivaria', '081585358390'),
+(1, 2, '1234567891', 'Tri', 'L', '2018-12-21', 'Kelapa Dua', '081585358391');
 
 -- --------------------------------------------------------
 
@@ -77,7 +69,8 @@ CREATE TABLE `antrean_poli2` (
 --
 
 INSERT INTO `antrean_poli2` (`id_poli`, `no_antrean`, `nik`, `nama_pasien`, `jeniskelamin`, `tgllahir`, `alamat`, `notelp`) VALUES
-(2, 1, '111', 'agung', 'L', '2018-12-06', 'depok', '081384389957');
+(2, 1, '1234567892', 'Zulfikar', 'L', '2018-12-21', 'Pamulang', '081585358392'),
+(2, 2, '1234567893', 'Anisa', 'P', '2018-12-21', 'Margonda', '081585358393');
 
 -- --------------------------------------------------------
 
@@ -214,12 +207,6 @@ ALTER TABLE `poli`
   ADD PRIMARY KEY (`id_poli`);
 
 --
--- Indexes for table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -227,13 +214,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `antrean_poli1`
 --
 ALTER TABLE `antrean_poli1`
-  MODIFY `no_antrean` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `no_antrean` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `antrean_poli2`
 --
 ALTER TABLE `antrean_poli2`
-  MODIFY `no_antrean` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `no_antrean` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `antrean_poli3`
@@ -258,12 +245,6 @@ ALTER TABLE `antrean_poli5`
 --
 ALTER TABLE `poli`
   MODIFY `id_poli` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `user`
---
-ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

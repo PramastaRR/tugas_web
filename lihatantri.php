@@ -306,10 +306,14 @@ include "connection.php";
                 
                         <table>
                             <tr>
+                                <th>No Antrean</th>
+                                <th>Nama Poli</th>
                                 <th>Nama</th>
-                                <th>Poli</th>
-                                <th>Nomor Antrean</th>
-                            
+                                <th>Jenis Kelamin</th>
+                                <th>Tanggal Lahir</th>
+                                <th>Alamat</th>
+                                <th>NIK</th>
+                                <th>No Telpon</th>
                             </tr>
                             <?
                             if (!empty($_GET['search'])){
@@ -325,9 +329,14 @@ include "connection.php";
                                     
                             ?>
                             <tr>
-                                <td><?= $rows['nama_pasien']?></td>
-                                <td><?= $rows['nama_poli']?></td>
-                                <td><?= $rows['no_antrean']?></td>
+                            <td> <?= $rows['no_antrean'] ?></td>
+                            <td> <?= $rows['nama_poli'] ?></td>
+                            <td> <?= $rows['nama_pasien'] ?></td>
+                            <td> <?= $rows['jeniskelamin'] ?></td>
+                            <td> <?= $rows['tgllahir'] ?></td>
+                            <td> <?= $rows['alamat'] ?></td>
+                            <td> <?= $rows['nik'] ?></td>
+                            <td> <?= $rows['notelp'] ?></td>
                             </tr>
                             <?php
                                     }

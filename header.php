@@ -1,6 +1,6 @@
 
 <div class="header"> 
-            <a href="/tugas_web/beranda.php" class="logo">Pendaftaran Antrean Puskesmas Gunadarma</a> 
+            <a href="/tugas_web/beranda.php" class="logo">Pendaftaran Antrean Klinik Trita</a> 
             <div class="header-right"> 
                 <a id="beranda" href="/tugas_web/beranda.php">Beranda</a> 
                 <!-- <a href="pencarian.html">Pencarian</a>  -->
