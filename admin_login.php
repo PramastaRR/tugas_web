@@ -20,9 +20,6 @@
                 <p>Password</p> 
                 <input type="password" name="password" placeholder="Enter Password"> 
                 <input type="submit" name="submit" value="Login"> 
-                <center>
-                    <a href="#">Forget Password</a> 
-                </center>                 
             </form>             
         </div>         
     </body>     

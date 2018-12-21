@@ -298,6 +298,7 @@ $sql_result = $conn->query(
     <th>NIK</th>
     <th>Nama</th>
     <th>Jenis Kelamin</th>
+    <th>Tanggal Lahir</th>
     <th>Alamat</th>
     <th>No Telpon</th>
   </tr>
@@ -313,6 +314,7 @@ $sql_result = $conn->query(
     <td> <?= $rows['nik'] ?></td>
     <td> <?= $rows['nama_pasien'] ?></td>
     <td> <?= $rows['jeniskelamin'] ?></td>
+    <td> <?= $rows['tgllahir'] ?></td>
     <td> <?= $rows['alamat'] ?></td>
     <td> <?= $rows['notelp'] ?></td>
 
@@ -335,13 +337,6 @@ $sql_result = $conn->query(
                 <span>&nbsp;2018 Dashboard Pasien. </span> 
             </footer>             
         </div>
-        <script>
-            // var tombolHapusAntrean = document.getElementById('hapusAntrean');
-
-            // tombolHapusAntrean.addEventListener('submit', function(){
-            //     return confirm('Yakin ingin menghapus antrean? Antrean yang sudah dihapus tidak bisa dikembalikan.');
-            // }, false);
-        </script>     
     </body>     
 </html>
 
