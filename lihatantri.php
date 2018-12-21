@@ -311,29 +311,29 @@ include "connection.php";
                                 <th>Nomor Antrean</th>
                             
                             </tr>
-<?
-if (!empty($_GET['search'])){
-    $search = $_GET['search'];
-    for ($i=1; $i<=5; $i++){
-        $hasil_pencarian = $conn -> query("
-            select * from antrean_poli{$i} 
-            A left join poli B 
-            on A.id_poli = B.id_poli 
-            where nik='{$search}' or notelp='{$search}'
-        ");
-        while ($rows = $hasil_pencarian -> fetch_assoc()){
-        
-?>
+                            <?
+                            if (!empty($_GET['search'])){
+                                $search = $_GET['search'];
+                                for ($i=1; $i<=5; $i++){
+                                    $hasil_pencarian = $conn -> query("
+                                        select * from antrean_poli{$i} 
+                                        A left join poli B 
+                                        on A.id_poli = B.id_poli 
+                                        where nik='{$search}' or notelp='{$search}'
+                                    ");
+                                    while ($rows = $hasil_pencarian -> fetch_assoc()){
+                                    
+                            ?>
                             <tr>
                                 <td><?= $rows['nama_pasien']?></td>
                                 <td><?= $rows['nama_poli']?></td>
                                 <td><?= $rows['no_antrean']?></td>
                             </tr>
-<?php
-        }
-    }
-}
-?>
+                            <?php
+                                    }
+                                }
+                            }
+                            ?>
                            
                         </table>
                     </body>
