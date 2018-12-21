@@ -324,7 +324,7 @@ $sql_result = $conn->query(
   
 </table>
 <br/>
-            <form method="post" action="../hapusantrean.php">
+            <form method="post" action="../hapusantrean.php" id="hapusAntrean" onsubmit="return confirm('Yakin ingin menghapus antrean? Antrean yang sudah dihapus tidak bisa dikembalikan.');">
                 <input type="hidden" name="id_poli" value="<?= $id_poli ?>">
                 <input type="submit" class="logout" value="Hapus Antrean">                
             </form>
@@ -334,7 +334,14 @@ $sql_result = $conn->query(
                 </ul>                 
                 <span>&nbsp;2018 Dashboard Pasien. </span> 
             </footer>             
-        </div>     
+        </div>
+        <script>
+            // var tombolHapusAntrean = document.getElementById('hapusAntrean');
+
+            // tombolHapusAntrean.addEventListener('submit', function(){
+            //     return confirm('Yakin ingin menghapus antrean? Antrean yang sudah dihapus tidak bisa dikembalikan.');
+            // }, false);
+        </script>     
     </body>     
 </html>
 
