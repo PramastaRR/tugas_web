@@ -75,7 +75,7 @@
             <p>Berikut ini petunjuk tata cara pendaftaran online</p> 
         </div>         
         <div class="image">
-            <img src="https://simpus.depok.go.id/pendaftaran/web//img/flow.jpg" class="center" style=" 
+            <img src="petunjuk.jpg" class="center" style=" 
   display: block;
   margin-left: auto;
   margin-right: auto;
